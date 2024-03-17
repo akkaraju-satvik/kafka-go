@@ -21,7 +21,6 @@ func main() {
 		NumPartitions:     0,
 		ReplicationFactor: 1,
 	})
-
 	if err != nil {
 		log.Fatal(err, "failed to create topic")
 	}
