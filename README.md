@@ -19,8 +19,8 @@ The docker-compose file is from the [example](https://github.com/apache/kafka/bl
 - Run the producer and consumer using the following commands:
 
 ```bash
-go run producer/main.go
-go run consumer/main.go
+go run producer/main.go -env <env filename> <messages>
+go run consumer/main.go -env <env filename>
 ```
 
 **Note**: If you are running the broker locally, you can use the 9092 port to connect to the broker. If you are running the broker in a different environment, use the 19092 port to connect to the broker.
