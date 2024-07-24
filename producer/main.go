@@ -46,7 +46,10 @@ func main() {
 	args := flag.Args()
 	for _, arg := range args {
 		_, err = topicConn.WriteMessages(
-			kafka.Message{Value: []byte(arg)},
+			kafka.Message{
+				Key:   []byte(arg),
+				Value: []byte(arg),
+			},
 		)
 		if err != nil {
 			log.Fatalln("failed to write messages:", err)
